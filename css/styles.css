@@ -42,10 +42,7 @@ body {
 	padding-right: 15px;
 	/* outline: 2px solid #404BBF;  */
 }
-header {
-	border-bottom: 3px solid rgba(0, 0, 0, 0.25);
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
+
 .conteiner.header {
 	display: flex;
 	align-items: center;
@@ -86,6 +83,8 @@ header {
 	padding-top: 24px;
 	padding-bottom: 24px;
 
+	
+
 	font-weight: 500;
 	text-decoration: none;
 	color: var(--dark);
@@ -97,13 +96,31 @@ header {
 }
 .header-contacts-link {
 	display: block;
+	
 	padding-top: 24px;
 	padding-bottom: 24px;
-
 	text-decoration: none;
 	color: var(--text);
+	outline: 2px solid #404BBF;
 }
+.header-contacts-link.icon-mail::before {
+	content: "";
+	display: inline-block;
+	align-items: center;
+	width: 23px;
+	height: 23px;
+	background-image: url("../images/header/mail.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 24px,24px;
 
+	margin-right: 5px;
+	padding-top: 0;
+	padding-bottom: 0;
+
+	background-color: #31d0aa;
+	outline: 2px solid #404BBF;
+}
 .site-nav-link:hover,
 .site-nav-link:focus,
 .site-nav-link.current:hover,
@@ -120,13 +137,24 @@ header {
 	color: var(--primary-brand);
 }
 /* Hero */
-.hero {
-	background: var(--dark);
-	text-align: center;
-}
 .section.hero {
+	height: 600px;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
+
 	padding-top: 192px;
 	padding-bottom: 192px;
+
+	text-align: center;
+	
+	background-image: linear-gradient(to right, rgba(217, 217, 217, 0.7), rgba(217, 217, 217, 0.7)), url(../images/people-office.jpg);
+	background-repeat: no-repeat;	
+	background-size: cover;
+	background-position: center;
+
+	background-color: var(--dark);
+	border: 1px solid #000000;
 }
 /* hero title */
 .hero-title {
@@ -169,12 +197,9 @@ header {
     color: var(--primary-brand);
 } */
 
-.button:hover,
-.button:focus {
-	background: var(--primary-brand);
-}
-.button:active {
+.button:hover, .button:focus, .button:active {
 	background: #404bbf;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 /* Sections */
 .section {
@@ -201,14 +226,41 @@ header {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: calc(24 / 20);
-	margin-top: 0;
+	margin-top: 8px;
 	margin-bottom: 8px;
+}
+/* Benefits */
+.benefits-item::before{
+	content: "";
+	display: block;
+	height: 112px;
+	background-color: var(--light);
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.benefits-item.icon-antenna::before {
+	background-image: url(../images/benefits/antenna.svg);
+}
+.benefits-item.icon-clock::before{
+	background-image: url(../images/benefits/clock.svg);
+}
+.benefits-item.icon-diagram::before {
+	background-image: url(../images/benefits/diagram.svg);
+}
+.benefits-item.icon-astronaut::before{
+	background-image: url(../images/benefits/astronaut.svg);
+}
+.do-item {
+	background-color: var(--primary-white-color);
+	border: 1px solid var(--accent);
 }
 .section-team {
 	background-color: var(--light);
 }
-.team-item, .do-item  {
+.team-item {
 	background-color: var(--primary-white-color);
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
 }
 .do-item-img, .team-item-img, .portfolio-item-img {
 	display: block;
@@ -219,6 +271,12 @@ header {
 	padding-top: 32px;
 	padding-bottom: 32px;
 	text-align: center;
+}
+
+.content {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+	border-radius: 0px 0px 4px 4px;
+
 }
 /* list text */
 .list-text {
@@ -247,7 +305,7 @@ header {
 	align-items: center;
 	text-decoration: none;
 	text-transform: uppercase;
-	color: #f4f4fd;
+	color: var(--light);
 }
 .footer-logo-prefix {
 	color: var(--primary-brand);
@@ -282,7 +340,7 @@ header {
 	line-height: calc(24 / 16);
 	letter-spacing: 0.04em;
 
-	border: 1px solid #e7e9fc;
+	border: 1px solid var(--accent);
 	border-radius: 4px;
 	/* margin-left: 24px; */
 }
@@ -299,8 +357,9 @@ header {
 	font-weight: 500;
 	font-size: 16px;
 	line-height: calc(24 / 16);
-	letter-spacing: 0.04em;
+	/* letter-spacing: 0.04em; */
 
+	border: 1px solid transparent;
 	box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 	border-radius: 4px;
 }
@@ -314,7 +373,7 @@ header {
 	padding-bottom: 32px;
 	padding-left: 16px;
 
-	border: 0.5px solid #f4f4fd;
+	border: 0.5px solid var(--light);
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .portfolio-list {
