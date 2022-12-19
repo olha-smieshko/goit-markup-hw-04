@@ -30,6 +30,7 @@ body {
 	list-style: none;
 	margin: 0;
 	padding: 0;
+	/* outline: 2px solid #404BBF; */
 }
 /* Header */
 .conteiner {
@@ -83,8 +84,6 @@ body {
 	padding-top: 24px;
 	padding-bottom: 24px;
 
-	
-
 	font-weight: 500;
 	text-decoration: none;
 	color: var(--dark);
@@ -94,32 +93,22 @@ body {
 	display: flex;
 	margin-left: auto;
 }
+
 .header-contacts-link {
-	display: block;
-	
-	padding-top: 24px;
-	padding-bottom: 24px;
+	display: flex;
 	text-decoration: none;
 	color: var(--text);
-	outline: 2px solid #404BBF;
 }
-.header-contacts-link.icon-mail::before {
-	content: "";
-	display: inline-block;
-	align-items: center;
-	width: 23px;
-	height: 23px;
-	background-image: url("../images/header/mail.svg");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: 24px,24px;
-
-	margin-right: 5px;
-	padding-top: 0;
-	padding-bottom: 0;
-
-	background-color: #31d0aa;
-	outline: 2px solid #404BBF;
+.contact-icon {
+	width: 24px;
+	height:  24px;
+	fill: var(--text);
+}
+.contact-icon:hover, .contact-icon:focus {
+	fill: var(--primary-brand);
+}
+.contact-text {
+	margin-left: 10px;
 }
 .site-nav-link:hover,
 .site-nav-link:focus,
@@ -230,29 +219,28 @@ body {
 	margin-bottom: 8px;
 }
 /* Benefits */
-.benefits-item::before{
-	content: "";
-	display: block;
+
+.benefits-item {
+	width: 264px;
+}
+.benefits-icon-area {
+	display: flex;
 	height: 112px;
 	background-color: var(--light);
-	background-position: center;
-	background-repeat: no-repeat;
+	justify-content: center;
+	align-items: center;
 }
-.benefits-item.icon-antenna::before {
-	background-image: url(../images/benefits/antenna.svg);
-}
-.benefits-item.icon-clock::before{
-	background-image: url(../images/benefits/clock.svg);
-}
-.benefits-item.icon-diagram::before {
-	background-image: url(../images/benefits/diagram.svg);
-}
-.benefits-item.icon-astronaut::before{
-	background-image: url(../images/benefits/astronaut.svg);
+.benefits-icon {
+	width: 64px;
+	height: 64px;
 }
 .do-item {
 	background-color: var(--primary-white-color);
 	border: 1px solid var(--accent);
+}
+.do-item-img {
+	width: 360px;
+	height: 300px;
 }
 .section-team {
 	background-color: var(--light);
@@ -261,6 +249,10 @@ body {
 	background-color: var(--primary-white-color);
 	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 	border-radius: 0px 0px 4px 4px;
+}
+.team-item-img {
+	width: 264px;
+	height: 260px;
 }
 .do-item-img, .team-item-img, .portfolio-item-img {
 	display: block;
@@ -282,20 +274,59 @@ body {
 .list-text {
 	color: var(--text);
 	margin-top: 0;
-	margin-bottom: 0;
+	margin-bottom: 8;
 }
-/* Benefits*/
-.benefits-item {
-	width: 264px;
+.soc-link {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	background-color: var(--primary-brand);
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
 }
+.soc-icon {
+	width: 16px;
+	height: 16px;
+}
+/* Customers */
+.customers-link {
+	display: flex;
+	width: 168px;
+	height: 88px;
+
+	border: 1px solid #8E8F99;
+	border-radius: 4px;
+
+	padding-top: 16px;
+	padding-right: 32px;
+	padding-bottom: 16px;
+	padding-left: 32px;
+	background-color: var(--primary-white-color);
+}
+.customers-icon {
+	fill: var(--subtle-text);
+}
+.customers-link:hover, .customers-link:focus {
+	border: 1px solid var(--primary-brand);
+	fill: var(--primary-brand);
+}
+/* .customers-icon:hover, .customers-icon:focus {
+	fill: var(--primary-brand);
+} */
 /* Footer */
 .footer {
 	padding-top: 100px;
 	padding-bottom: 100px;
-
 	background: var(--dark);
 }
-
+.footer-list {
+	display: flex;
+	justify-content: left;
+}
+.footer-item + .footer-item {
+	margin-left: 120px ;
+}
 .footer-logo {
 	font-family: "Raleway", sans-serif;
 	font-weight: 800;
@@ -313,11 +344,30 @@ body {
 /* footer text */
 .footer-text {
 	margin-top: 16px;
-
 	color: var(--accent);
 	width: 264px;
 }
+.footer-title {
+	color: var(--primary-white-color);
+	width: 208px;
 
+	font-weight: 500;
+	font-size: 16px;
+	line-height: calc(24px/16px);
+	letter-spacing: 0.02em;
+}
+.footer-soc-link {
+	display: flex;
+	width: 40px;
+	height: 40px;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 50%;
+	align-items: center;
+	justify-content: center;
+}
+.footer-soc-link:hover, .footer-soc-link:focus {
+	background-color: var(--success);
+}
 /* ===============PORTFOLIO================= */
 
 .filter {
@@ -391,6 +441,10 @@ body {
 .work-link {
 	text-decoration: none;
 	color: var(--dark);
+}
+.portfolio-item-img {
+	width: 360px;
+	height: 300px;
 }
 .card-content {
 	color: var(--light);
