@@ -43,6 +43,10 @@ body {
 	padding-right: 15px;
 	/* outline: 2px solid #404BBF;  */
 }
+header {
+	border-bottom: 1px solid #E7E9FC;
+	box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
 
 .conteiner.header {
 	display: flex;
@@ -136,8 +140,7 @@ body {
 	padding-bottom: 192px;
 
 	text-align: center;
-	
-	background-image: linear-gradient(to right, rgba(217, 217, 217, 0.7), rgba(217, 217, 217, 0.7)), url(../images/people-office.jpg);
+	background-image: linear-gradient(to right, rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
 	background-repeat: no-repeat;	
 	background-size: cover;
 	background-position: center;
@@ -276,10 +279,14 @@ body {
 	margin-top: 0;
 	margin-bottom: 8;
 }
-.soc-link {
-	display: flex;
+.soc-item {
 	width: 40px;
 	height: 40px;
+}
+.soc-link {
+	display: flex;
+	width: 100%;
+	height: 100%;
 	background-color: var(--primary-brand);
 	border-radius: 50%;
 	align-items: center;
@@ -290,30 +297,30 @@ body {
 	height: 16px;
 }
 /* Customers */
+
 .customers-link {
 	display: flex;
 	width: 168px;
 	height: 88px;
-
 	border: 1px solid #8E8F99;
 	border-radius: 4px;
 
+	background-color: var(--primary-white-color);
+}
+.customers-icon {
 	padding-top: 16px;
 	padding-right: 32px;
 	padding-bottom: 16px;
 	padding-left: 32px;
-	background-color: var(--primary-white-color);
-}
-.customers-icon {
+
 	fill: var(--subtle-text);
 }
 .customers-link:hover, .customers-link:focus {
-	border: 1px solid var(--primary-brand);
+	border: 1px solid var(--primary-brand);	
+}
+.customers-icon:hover, .customers-icon:focus {
 	fill: var(--primary-brand);
 }
-/* .customers-icon:hover, .customers-icon:focus {
-	fill: var(--primary-brand);
-} */
 /* Footer */
 .footer {
 	padding-top: 100px;
@@ -347,7 +354,7 @@ body {
 	color: var(--accent);
 	width: 264px;
 }
-.footer-title {
+.footer-soc-text {
 	color: var(--primary-white-color);
 	width: 208px;
 
@@ -358,8 +365,8 @@ body {
 }
 .footer-soc-link {
 	display: flex;
-	width: 40px;
-	height: 40px;
+	width: 100%;
+	height: 100%;
 	background: rgba(255, 255, 255, 0.1);
 	border-radius: 50%;
 	align-items: center;
@@ -439,9 +446,13 @@ body {
 	margin-bottom: 0;
 }
 .work-link {
+	display: block;
 	text-decoration: none;
 	color: var(--dark);
 }
+.work-link:hover, .work-link:focus {
+	box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+} 
 .portfolio-item-img {
 	width: 360px;
 	height: 300px;
