@@ -300,27 +300,26 @@ header {
 
 .customers-link {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 168px;
 	height: 88px;
-	border: 1px solid #8E8F99;
+	color: var(--subtle-text);
+	border: 1px solid var(--subtle-text);
 	border-radius: 4px;
-
-	background-color: var(--primary-white-color);
 }
 .customers-icon {
-	padding-top: 16px;
-	padding-right: 32px;
-	padding-bottom: 16px;
-	padding-left: 32px;
-
-	fill: var(--subtle-text);
+	width: 104px;
+ 	height: 56px;
+ 	fill: currentColor;
 }
 .customers-link:hover, .customers-link:focus {
-	border: 1px solid var(--primary-brand);	
+	border: 1px solid var(--primary-brand);
+	color: var(--primary-brand);	
 }
-.customers-icon:hover, .customers-icon:focus {
+/* .customers-icon:hover, .customers-icon:focus {
 	fill: var(--primary-brand);
-}
+} */
 /* Footer */
 .footer {
 	padding-top: 100px;
